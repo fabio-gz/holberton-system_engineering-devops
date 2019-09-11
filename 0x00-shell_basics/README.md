@@ -1,0 +1,1 @@
+Project to understand the basic Shell commands and scripts
