@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 # 4th pos "Bad luck" 8th pos "Good luck" the rest "Holberton School"
 
-i=0
+i=1
 while [ $i -le 10 ]
 do
-    if [ "$i" == 3 ]
+    if [ "$i" == 4 ]
     then
 	echo "bad luck"
-    elif [ "$i" == 7 ]
+    elif [ "$i" == 8 ]
     then
 	echo "good luck"
     else
