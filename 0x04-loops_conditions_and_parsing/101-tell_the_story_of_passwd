@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Display the contects of the file /etc/passwd in a sentence
+
+file="/etc/passwd"
+while IFS=: read -r usr pssw usrid grpid usrinfo hdir cmshell
+do
+    echo "The user $usr is part of the $grpid gang, lives in $hdir and rides $cmshell. $usrid's place is protected by the passcode $pssw, more info the user here: $usrinfo"
+done < "$file"
