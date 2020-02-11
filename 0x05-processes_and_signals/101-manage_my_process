@@ -4,11 +4,11 @@
 start()
 {
     ./manage_my_process &
-    echo '$!' > /var/run/my_process.pid
+    echo "$!" > /var/run/my_process.pid
 }
 stop()
 {
-    pkill -f "$(cat /var/run/my_process.pid)"
+    pkill -f ./manage_my_proces
     rm -f /var/run/my_process.pid
 }
 restart()
