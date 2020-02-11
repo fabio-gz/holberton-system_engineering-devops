@@ -8,7 +8,7 @@ start()
 }
 stop()
 {
-    pkill -f ./mamage_my_process
+    pkill -f "$(cat /var/run/my_process.pid)"
     rm -f /var/run/my_process.pid
 }
 restart()
@@ -16,7 +16,7 @@ restart()
     stop
     start
 }
-case '$1' in
+case "$1" in
     start) start
 	echo 'manage_my_process started'
 	;;
@@ -27,7 +27,7 @@ case '$1' in
 	echo 'manage_my_process restarted'
 	;;
     *)
-	echo 'manage_my_process {start|stop|restart}'
+	echo 'Usage: manage_my_process {start|stop|restart}'
 	;;
 esac
 exit 0
