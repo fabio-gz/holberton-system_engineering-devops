@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # configures the container to nginx run as nginx user
-chmod 77 /etc/nginx/nginx.conf
+chmod 777 /etc/nginx/nginx.conf
 chown nginx:nginx /etc/nginx/nginx.conf
 sed -i "s/80/8080/g" /etc/nginx/sites-enabled/default
 pkill apache2
