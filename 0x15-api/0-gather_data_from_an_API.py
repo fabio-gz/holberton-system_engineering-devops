@@ -21,7 +21,7 @@ if __name__ == '__main__':
             l_task.append(i)
 
     user_name = users.json().get('name')
-    print('Employee {} is done with task({}/{}):'.format(user_name,
+    print('Employee {} is done with tasks({}/{}):'.format(user_name,
                                                          done, tasks))
     for j in l_task:
         print('\t', j.get('title'))
